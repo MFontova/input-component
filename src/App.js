@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Input } from './components/Input/Input'
+import './App.css'
+import { Footer } from './components/Footer/Footer'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className='App'>
+        <Input />
+        <Input error />
+        <Input disabled />
+        <Input helperText='Helper text' error />
+        <Input startIcon='call' />
+        <Input endIcon='lock' />
+        <Input text='Text' />
+        <Input size='sm' />
+        <Input size='md' fullWidth />
+        <Input multiline row={20} disabled />
+      </div>
+      <Footer />
+    </>
+  )
 }
 
-export default App;
+export default App
